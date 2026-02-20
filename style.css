@@ -1,0 +1,161 @@
+/*
+  Feuille de style principale.
+  Objectif : design simple, propre et lisible pour apprendre facilement.
+*/
+
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --border: #dbe3ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(960px, 92%);
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.tag {
+  display: inline-block;
+  margin: 0;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: #bfdbfe;
+  color: #1e3a8a;
+  font-size: 0.9rem;
+}
+
+h1 {
+  margin: 0.9rem 0 0.4rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.subtitle {
+  margin: 0 0 1.4rem;
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.8rem 1.1rem;
+  border-radius: 0.65rem;
+  font-weight: 600;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: var(--primary-dark);
+}
+
+.section {
+  padding: 3.6rem 0;
+}
+
+.alt {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.check-list,
+.warning-list {
+  padding-left: 1.2rem;
+}
+
+.check-list li,
+.warning-list li {
+  margin-bottom: 0.6rem;
+}
+
+.note {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.7rem;
+  max-width: 620px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  padding: 0.75rem;
+  background-color: #fff;
+}
+
+button {
+  justify-self: start;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  background: var(--primary-dark);
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 2rem 0;
+  font-size: 0.95rem;
+}
+
+/* Adaptation mobile : espacements un peu réduits */
+@media (max-width: 600px) {
+  .hero {
+    padding: 4rem 0;
+  }
+
+  .section {
+    padding: 2.8rem 0;
+  }
+}
